@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import random
+
+# Generate some sample data for the spray chart
+num_hits = 100
+x_coords = [random.uniform(-250, 250) for _ in range(num_hits)]
+y_coords = [random.uniform(0, 500) for _ in range(num_hits)]
+
+# Create a scatter plot
+plt.figure(figsize=(8, 6))
+plt.scatter(x_coords, y_coords, color='blue', alpha=0.5)
+
+# Customize the plot
+plt.title('Baseball Spray Chart')
+plt.xlabel('Horizontal Distance (ft)')
+plt.ylabel('Vertical Distance (ft)')
+plt.xlim(-250, 250)
+plt.ylim(0, 500)
+plt.axhline(y=250, color='gray', linestyle='--')
+plt.axvline(x=0, color='gray', linestyle='--')
+
+# Show the plot
+plt.show()
